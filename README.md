@@ -17,8 +17,8 @@ I'm not sure what explicit purpose this program serves yet but it gave me an exc
 
 I've included the Windows .exe inside the .zip. Compile on Linux with:
 ```g++ -o wiz2sql Wiz2SQL.cpp Wizard.cpp Tables.cpp TableField.cpp
-Run the program without any arguments for a usage description. An example run with arguments looks like this:
 ```
+Run the program without any arguments for a usage description. An example run with arguments looks like this:
 ```wiz2sql.exe wiz.bin -schema schema.sql -data data.sql
 ```
 To import into SQLite:
