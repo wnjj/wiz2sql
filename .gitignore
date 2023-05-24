@@ -33,3 +33,9 @@
 *.exe
 *.out
 *.app
+
+code/Wiz2SQL/.vs/
+code/Wiz2SQL/ipch/
+code/Wiz2SQL/Debug/
+code/Wiz2SQL/Release/
+code/Wiz2SQL/*.opensdf

@@ -189,8 +189,8 @@ int64_t CWizard::readLong()
 {
   int64_t ret=0;
 
-  ret |= ((int64_t) readInt() & 0xFFFF) << 32;
-  ret |= ((int64_t) readInt() & 0xFFFF);
+  ret |= ((int64_t) readInt() & 0xFFFFFFFF) << 32;
+  ret |= ((int64_t) readInt() & 0xFFFFFFFF);
 
   return ret;
 }
