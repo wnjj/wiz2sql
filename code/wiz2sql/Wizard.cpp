@@ -240,7 +240,7 @@ bool CWizard::Eof()
 }
 
 
-// 1. Turn all " into "" so entire string can be quoted.
+// 1. Turn all ' into '' so entire string can be quoted.
 // 2. Remove binary characters (non-printable and non-space).
 //    Binary metadata in some photos cannot be imported into 'text' DB fields.
 std::string CWizard::DBText(std::string instr, bool stripBinary)
@@ -250,15 +250,15 @@ std::string CWizard::DBText(std::string instr, bool stripBinary)
   unsigned char c;
 
 
-  outstr = '"';
+  outstr = '\'';
   for (i=0; i<(int) instr.length(); i++)
   {
     c = instr[i];
-    if (c == '"') outstr += '"';
+    if (c == '\'') outstr += '\'';
     if (!stripBinary || isprint(c) || isspace(c)) // filter out binary bytes here
       outstr += c;
   }
-  outstr += '"';
+  outstr += '\'';
 
   return outstr;
 }
